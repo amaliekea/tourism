@@ -12,14 +12,17 @@ public class TouristService {
     TouristRepository touristRepository = new TouristRepository();
 
     //CREATE
-    public void addAttraction(String name, String description) {
-        TouristAttraction t = new TouristAttraction(name, description);
-        touristRepository.addAttraction(t);
+    public void addAttraction(TouristAttraction t) {
+         touristRepository.addAttraction(t);
     }
 
     //READ
-    public TouristAttraction readIndex(int index) {
+    public TouristAttraction readIndex(int index) { //KORREKT TJEK INTRO TIL SP
         return touristRepository.readIndex(index);
+    }
+
+    public TouristAttraction getAttractionByName(String name) {
+        return touristRepository.getAttractionByName(name);
     }
 
     public List<TouristAttraction> getAllAttractions() {
@@ -28,9 +31,7 @@ public class TouristService {
 
     //UPDATE
     public void updateAttraction(int index, TouristAttraction t) {
-        touristRepository.getAllAttractions().get(index).setDescription(t.getDescription());
-        touristRepository.getAllAttractions().get(index).setName(t.getName());
-        // touristAttractions.set(index, t);
+        touristRepository.updateAttraction(index, t);
     }
 
     //DELETE

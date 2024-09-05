@@ -15,6 +15,7 @@ public class TouristRepository {
         touristAttractions.add(new TouristAttraction("Tivoli", "playfull attractions"));
         touristAttractions.add(new TouristAttraction("Zoo", "full of animals"));
     }
+
     //CREATE
     public void addAttraction(TouristAttraction t) {
         touristAttractions.add(t);
@@ -24,16 +25,25 @@ public class TouristRepository {
     public List<TouristAttraction> getAllAttractions() {
         return touristAttractions;
     }
+
     public TouristAttraction readIndex(int index) {
         return touristAttractions.get(index);
     }
 
+    public TouristAttraction getAttractionByName(String name) {
+        for (TouristAttraction t : touristAttractions) {
+            if (t.getName().equals(name)) {
+                return t;
+            }
+        }
+        return null;
+    }
+
     //UPDATE
     public void updateAttraction(int index, TouristAttraction t) {
-        touristAttractions.get(index).setDescription(t.getDescription());
-        touristAttractions.get(index).setName(t.getName());
-       // touristAttractions.set(index, t);
+        touristAttractions.set(index, t);
     }
+
     //DELETE
     public void deleteAttraction(TouristAttraction t) {
         touristAttractions.remove(t);

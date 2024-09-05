@@ -4,6 +4,10 @@ public class TouristAttraction {
     private String name;
     private String description;
 
+    public TouristAttraction() {
+
+    }
+
     public TouristAttraction(String name, String description) {
         this.name = name;
         this.description = description;
@@ -24,6 +28,7 @@ public class TouristAttraction {
     public void setDescription(String description) {
         this.description = description;
     }
+
     @Override
     public String toString() {
         return "name: " + name + ", description " + description;
