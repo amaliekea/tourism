@@ -15,15 +15,20 @@
 <nav>
     <h2>Attractions</h2>
     <ul>
-        <li><a href="https://goboat.dk/da?gad_source=1&gclid=CjwKCAjwreW2BhBhEiwAavLwfA55ov7O9qGhawhQftxtH6l9uUefX3reEuf6zZhCYAhhq2zcYKIsyxoCz30QAvD_BwE" target="_blank">boat activities</a></li>
+        <li>
+            <a href="https://goboat.dk/da?gad_source=1&gclid=CjwKCAjwreW2BhBhEiwAavLwfA55ov7O9qGhawhQftxtH6l9uUefX3reEuf6zZhCYAhhq2zcYKIsyxoCz30QAvD_BwE"
+               target="_blank">boat activities</a></li>
         <li><a href="https://foodsofcopenhagen.com/copenhagen-delicacy-tour/" target="_blank">eating.com</a></li>
-        <li><a href="https://www.visitdenmark.com/denmark/things-do/attractions/copenhagen" target="_blank">Sightseeing</a></li>
+        <li><a href="https://www.visitdenmark.com/denmark/things-do/attractions/copenhagen"
+               target="_blank">Sightseeing</a></li>
     </ul>
-    <h2>Links</h2>
-    <ul>
-        <li><a href="http://localhost:8080/attractions" target="_blank">All attractions</a></li>
-        <li><a href="http://localhost:8080/attractions/Tivoli" target="_blank">Tivoli attraction</a></li>
-    </ul>
+    <form action="http://localhost:8080/attractions/Tivoli" method="get" target="_blank">
+        <button type="submit">Tivoli attraction</button>
+    </form>
+    <form action="http://localhost:8080/attractions" method="get" target="_blank">
+        <button type="submit">See all attractions</button>
+    </form>
+
 </nav>
 <main>
     <h2>main</h2>
