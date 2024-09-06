@@ -12,8 +12,8 @@ public class TouristRepository {
 
     public TouristRepository() {
         touristAttractions = new ArrayList<>();
-        touristAttractions.add(new TouristAttraction("Tivoli", "playfull attractions"));
-        touristAttractions.add(new TouristAttraction("Zoo", "full of animals"));
+        touristAttractions.add(new TouristAttraction("Tivoli", "A playfull wonderland"));
+        touristAttractions.add(new TouristAttraction("Zoo", "A wildlife park, home to a wide variety of animals from around the world."));
     }
 
     //CREATE

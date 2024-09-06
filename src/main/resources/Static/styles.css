@@ -9,7 +9,7 @@ body {
  'footer'; /* Foderen fylder hele bredden */
     grid-template-rows: auto auto 1fr auto; /* Højden på rækkerne */
     grid-template-columns: 1fr; /* Kun én kolonne */
-    background-color: aliceblue;
+    background-color: white;
 }
 /* bruges hvis min-width er 40em eller større */
 @media (min-width: 40em) {
@@ -26,6 +26,7 @@ body {
 }
 header {
     grid-area: header;
+    text-align: center;
 }
 nav {
     grid-area: nav;
@@ -38,12 +39,17 @@ footer {
 }
 ** Styling
 body {
-    background: #3c1361;
+    background: burlywood;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
 }
 header,
 nav,
 main,
 footer {
-    background: burlywood;
+    background: blanchedalmond;
     padding: 1em;
 }
