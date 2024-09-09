@@ -11,18 +11,18 @@ import java.util.List;
 
 //FORSØG AT LAV ROOT TIL HTML
 @Controller
-@RequestMapping("/attractions")
+@RequestMapping("/attractions") //angiver at klassen er en controller og mappes til '/attractions' URL'en
 public class TouristController {
-    private final TouristService touristService;
+    private final TouristService touristService; //dependency injection af touristservice
 
     public TouristController(TouristService touristService) {
         this.touristService = touristService;
     }
 
-    @GetMapping("") //GET attraction
+    @GetMapping("") //håndterer GET-forespørgsler til "/attractions"
     public ResponseEntity<List<TouristAttraction>> getAllAttractions() {
         List<TouristAttraction> touristAttractions = touristService.getAllAttractions();
-        return new ResponseEntity<>(touristAttractions, HttpStatus.OK);
+        return new ResponseEntity<>(touristAttractions, HttpStatus.OK);  // Returnerer listen over attraktioner med HTTP-statuskoden 200 (OK)
     }
 
     @GetMapping("/{name}") //GET attractions(name)
@@ -31,10 +31,10 @@ public class TouristController {
         return new ResponseEntity<>(touristAttraction, HttpStatus.OK);
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add")  // Håndterer POST-forespørgsler til "/attractions/add"
     public ResponseEntity<String> addAttraction(@RequestBody TouristAttraction touristAttraction) {
         touristService.addAttraction(touristAttraction);
-        return new ResponseEntity<>("Added!", HttpStatus.CREATED);
+        return new ResponseEntity<>("Added!", HttpStatus.CREATED); // Returnerer en succesbesked med HTTP-status 201 (CREATED)
     }
 
     @PostMapping("/update") //UPDATE
